@@ -4,11 +4,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import cities from "../data.json";
 import { Typography } from '@mui/material';
+import SearchAppBar from "../components/SearchAppBar";
 
 const Home = () => {
   return (
     <div>
-        <Container sx={{marginY: 5}}>
+        <SearchAppBar />
+        <Container sx={{marginY: 5, display: 'flex', flexWrap: 'wrap'}}>
             {cities.map((city) => (
                 <>
                 <Typography variant="h4" component="h2" marginTop={5} marginBottom={3}>
